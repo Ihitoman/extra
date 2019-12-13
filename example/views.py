@@ -42,12 +42,13 @@ class ActividadList(APIView):
         return Response(serializer.data)
     
     def post(self, request, format=None):
-        serializer = ActividadSerializer(data = request.data)
-        if serializer.is_valid():
-            serializer.save()
-            datas = serializer.data
-            return Response(datas)
-        return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+        Actividaad = Actividad.objects.create(
+            name = request.data['name'],
+            date = request.data['date'],
+            hour = request.data['hour']
+        )
+        Actividaad.save()
+        return Response("simon we")
 
 
 
