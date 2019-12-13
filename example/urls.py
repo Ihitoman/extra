@@ -10,7 +10,7 @@ urlpatterns = [
 
      # re_path(r'^example_lista/$', views.ExampleList.as_view() ),
      # re_path(r'^example_detail/(?P<id>\d+)$', views.ExampleDetail.as_view() ),
-     #xd
+     #x
      
      #urls extra
      re_path(r'^lista_actividades/$', views.ActividadList.as_view() ),

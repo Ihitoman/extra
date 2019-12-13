@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.7.3"
+
+before_install:
+  - pip install -U pip
+install:
+  - pip install -r requirements.txt
+
+scrip:
+  - python test.py
+notifications:
+  email: true
