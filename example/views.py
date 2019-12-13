@@ -84,15 +84,20 @@ class ActividadDetail(APIView):
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
-class CosaList(APIView):
+
+
+
+class CosaListA(APIView):
     
     def get(self, request, id, format=None):
-        queryset = Actividad.objects.filter(actividad_id=id)
-        serializer = ActividadSerializer(queryset, many=True)
+        queryset = Cosa.objects.filter(actividad_id=id)
+        serializer = CosaSerializer(queryset, many=True)
         return Response(serializer.data)
     
+
+class CosaList(APIView):
     def post(self, request, format=None):
-        serializer = ActividadSerializer(data = request.data)
+        serializer = CosaSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
             datas = serializer.data

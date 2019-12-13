@@ -16,6 +16,7 @@ urlpatterns = [
      re_path(r'^lista_actividades/$', views.ActividadList.as_view() ),
      #re_path(r'^listaiproductos/$', views.InventoriesFList.as_view() ),
      re_path(r'^detalle_actividad/(?P<id>\d+)$', views.CosaDetail.as_view() ),
-     re_path(r'^lista_cosa/(?P<id>\d+)$', views.CosaList.as_view() ),
+     re_path(r'^lista_cosa/(?P<id>\d+)$', views.CosaListA.as_view() ),
+      re_path(r'^add_actividades/$', views.ActividadList.as_view() ),
      
 ]
