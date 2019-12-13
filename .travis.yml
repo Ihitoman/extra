@@ -8,7 +8,6 @@ install:
   - pip install -r requirements.txt
 
 scrip:
-  - cd example
-  - python tests.py
+  - python manage.py test
 notifications:
   email: true
