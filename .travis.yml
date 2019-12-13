@@ -9,6 +9,6 @@ install:
 
 scrip:
   - cd example
-  - python test.py
+  - python tests.py
 notifications:
   email: true
