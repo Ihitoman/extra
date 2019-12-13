@@ -6,7 +6,7 @@ from example.models import Actividad
 from example.models import Cosa
 
 
-class ActividadSerializer(serializers.HyperlinkedModelSerializer):
+class ActividadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actividad
         fields = ('__all__')
